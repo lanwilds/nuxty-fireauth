@@ -23,8 +23,6 @@ export default {
 		signInWithGoogle({commit}){
             return new Promise((res,rej) => {
                 auth.signInWithRedirect(GoogleProvider).then((response)=>{
-                    console.log(response)
-                    // commit('auth/setUser', user)
                     res(response)
                 },error=>{
                     console.log(error)
